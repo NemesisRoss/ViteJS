@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>vite</title>
+</head>
+
+<body>
+    <fieldset class="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4">
+
+        <label class="label">Login</label>
+        <input class="input validator" type="email" required placeholder="mail@site.com" />
+
+        <label class="label">Password</label>
+        <input type="password" class="input validator" required placeholder="Password" minlength="6" maxlength="8"
+            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+            title="Must be more than 8 characters, including number, lowercase letter, uppercase letter" />
+        <p class="validator-hint">
+            Must be more than 8 characters, including
+            <br />At least one number
+            <br />At least one lowercase letter
+            <br />At least one uppercase letter
+        </p>
+    </fieldset>
+    <script type="module" src="./ExoRegex.js"></script>
+</body>
+
+</html>
